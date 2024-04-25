@@ -246,8 +246,8 @@
       {
         "current": {
           "selected": true,
-          "text": "dockerscoutpolicy",
-          "value": "dockerscoutpolicy"
+          "text": "",
+          "value": ""
         },
         "definition": "label_values(job)",
         "hide": 0,
@@ -270,8 +270,8 @@
       {
         "current": {
           "selected": false,
-          "text": "latest-indexed",
-          "value": "latest-indexed"
+          "text": "",
+          "value": ""
         },
         "datasource": {
           "type": "prometheus",
