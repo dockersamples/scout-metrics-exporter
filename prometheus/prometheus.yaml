@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 60s
+  scrape_timeout: 40s
+scrape_configs:
+  - job_name: <ORG>
+    metrics_path: /v1/exporter/org/<ORG>
+    scheme: https
+    static_configs:
+      - targets:
+          - api.scout.docker.com
+    authorization:
+      type: Bearer
+      credentials_file: /etc/prometheus/token
