@@ -1,0 +1,12 @@
+services:
+  datadog-agent:
+    container_name: datadog-agent
+    image: gcr.io/datadoghq/agent:7
+    environment:
+      - DD_API_KEY=${DD_API_KEY} # e.g. 1b6b3a42...
+      - DD_SITE=${DD_SITE} # e.g. datadoghq.com
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./conf.yaml:/etc/datadog-agent/conf.d/openmetrics.d/conf.yaml:ro
+      - ./token:/var/run/secrets/scout-metrics-exporter/token:ro

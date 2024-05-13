@@ -1,0 +1,13 @@
+instances:
+  - openmetrics_endpoint: "https://api.scout.docker.com/v1/exporter/org/<ORG>"
+    namespace: "scout-metrics-exporter"
+    metrics:
+      - scout_*
+    auth_token:
+      reader:
+        type: file
+        path: /var/run/secrets/scout-metrics-exporter/token
+      writer:
+        type: header
+        name: Authorization
+        value: Bearer <TOKEN>
