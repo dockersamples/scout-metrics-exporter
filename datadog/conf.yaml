@@ -1,5 +1,5 @@
 instances:
-  - openmetrics_endpoint: "https://api.scout.docker.com/v1/exporter/org/<ORG>"
+  - openmetrics_endpoint: "https://api.scout.docker.com/v1/exporter/org/<ORG>/metrics"
     namespace: "scout-metrics-exporter"
     metrics:
       - scout_*
